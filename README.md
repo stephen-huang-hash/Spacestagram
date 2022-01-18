@@ -11,7 +11,7 @@ The web application displays Mars Rovers Photos (taken 1000 days after the landi
 This web application has the following features:
 - Has a loading screen while the data is being fetched from NASA's Open API
 - Allows users to like and unlike projects
-- Filter images by rover name, camera name, and dates using the search bar.
+- Filter images by rover name, camera name, and dates using the search bar
 
 Technologies/Frameworks used:
 React, Bootstrap
