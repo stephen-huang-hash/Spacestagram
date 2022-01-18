@@ -2,7 +2,7 @@
 Spacestagram is a web application that takes data from NASA's Open API and displays it on a webpage.
 This was created for Shopify's Summer 2022 Front End Developer Intern Challenge.
 
-The site has been deployed on Github Pages. Check it out here: https://stephen-huang-hash.github.io/Spacestagram/
+The application has been deployed on Github Pages. Check it out here: https://stephen-huang-hash.github.io/Spacestagram/
 
 # Description
 
