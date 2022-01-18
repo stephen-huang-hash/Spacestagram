@@ -1,4 +1,29 @@
-# Getting Started with Create React App
+# Spacestagram
+Spacestagram is a web application that takes data from NASA's Open API and displays it on a webpage.
+This was created for Shopify's Summer 2022 Front End Developer Intern Challenge.
+
+# Description
+
+This web application has the following features:
+- Has a loading screen while the data is being fetched from NASA's Open API
+- Allows users to like and unlike projects
+- Filter images by rover name, camera name, and dates using the search bar.
+
+Technologies/Frameworks used:
+React, Bootstrap
+
+The decision to use React to build the app was because it would allow quick deployment and it's something I've worked with in the past. I experimented with Shopify Polaris as a framework but after struggling to get the styling I wanted with a lack of documentation, I decided to go with Bootstrap, which is very well documented and something I have more familiarity with.
+
+Challenges I faced during the project:
+- Initially, when you would like the nth image on the page and after filtering images through your search, the like would remain on the nth image. This didn't make sense to me because I thought all of the components were being re-rendered. It turns out this is due to React's behavior - it doesn't rerender components all the time, only when it needs to. I resolved this issue by differentiating the key of each ImageCard component based off of its id from NASA's API, not the id in the mapped array, which it was originally. Therefore, the key prop would always be unique for each ImageCard and always rerender every component whenever a search is made.
+- Likes didn't save after a search was made due to the components being re-rendered. I created an array to store savedImageIds whenever an image is liked, and removed them from the array whenever it's unliked.
+
+More features I would add in the future:
+- Save likes after page refresh
+- Make it so the search bar can take multiple key words at once for multiple categories ('Curiosity Front Hazard' would show all images with the Curiosity rover and Front Hazard Avoidance camera)
+- Light/Dark theme
+
+# Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

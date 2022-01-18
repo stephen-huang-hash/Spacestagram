@@ -3,10 +3,6 @@ import React from 'react';
 import Images from './components/Images.js';
 import Heading from './components/Heading.js';
 import Alert from './components/Alert.js';
-import enTranslations from '@shopify/polaris/locales/en.json';
-import {AppProvider} from '@shopify/polaris';
-
-
 
 class App extends React.Component {
   constructor(props) {
@@ -23,11 +19,11 @@ class App extends React.Component {
   }
   render() {
     return (
-      <AppProvider className="App" i18n={enTranslations}>
+      <React.Fragment className="App">
         <Heading updateFilter={this.updateFilter} className="header"/>
         <Alert />
         <Images filter={this.state.filter}/>
-      </AppProvider>
+      </React.Fragment>
     );
   }
 }
