@@ -6,6 +6,8 @@ The application has been deployed on Github Pages. Check it out here: https://st
 
 # Description
 
+The web applications displays Mars Rovers Photos (taken 1000 days after the landing date of the rover) from NASA's Open API: https://api.nasa.gov/
+
 This web application has the following features:
 - Has a loading screen while the data is being fetched from NASA's Open API
 - Allows users to like and unlike projects
