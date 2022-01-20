@@ -20,12 +20,13 @@ The decision to use React to build the app was because it's a technology I've wo
 
 Challenges I faced during the project:
 - Initially, when you would like the nth image on the page and after filtering images through your search, the like would remain on the nth image. This didn't make sense to me because I thought all of the components were being re-rendered. It turns out this is due to React's behavior - it doesn't rerender components all the time, only when it needs to. I resolved this issue by differentiating the key of each ImageCard component based off of its id from NASA's API, not the id in the mapped array, which it was originally. Therefore, the key prop would always be unique for each ImageCard and always rerender every component whenever a search is made.
-- Likes didn't save after a search was made due to the components being re-rendered. I created an array to store savedImageIds whenever an image is liked, and removed them from the array whenever it's unliked.
+- Initially, "Likes" didn't save after a search was made due to the components being re-rendered. I created an array to store savedImageIds whenever an image is liked, and removed them from the array whenever it's unliked.
 
 More features I would add in the future:
-- Save likes after page refresh
-- Make it so the search bar can take multiple key words at once for multiple categories ('Curiosity Front Hazard' would show all images with the Curiosity rover and Front Hazard Avoidance camera)
-- Light/Dark theme
+- Implement local storage in order for "Likes" to persist across tabs and store even after refreshing the browser.
+- Improve to a more dynamic search by including images that have partially matching keywords.
+Ex) "Curiosity Front Hazard" would display all images associated with "Curiosity rover" and "Front Hazard Avoidance camera")
+- Ability to toggle between light and dark theme
 
 # Getting Started
 
