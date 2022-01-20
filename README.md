@@ -20,8 +20,10 @@ The decision to use React to build the app was because it's a technology I've wo
 
 Challenges I faced during the project:
 - Initially, when you would like the nth image on the page and after filtering images through your search, the like would remain on the nth image. This didn't make sense to me because I thought all of the components were being re-rendered.
+
 Solution: It turns out this is due to React's behavior - it doesn't rerender components all the time, only when it needs to. I resolved this issue by differentiating the key of each ImageCard component based off of its id from NASA's API, not the id in the mapped array, which it was originally. Therefore, the key prop would always be unique for each ImageCard and always rerender every component whenever a search is made.
-- Initially, "Likes" weren't persisting on the images. I reproduced this issue by liking an image from the home page, then performing a search for that image and realizing the like status was incorrect. 
+- Initially, "Likes" weren't persisting on the images. I reproduced this issue by liking an image from the home page, then performing a search for that image and realizing the like status was incorrect.
+
 Solution: I realized problem was due to the component being re-rendered and resetting the state. I initialized an array to store savedImageIds whenever an image was liked. Similarly, I remove those Ids upon unlikes.
 
 More features I would add in the future:
