@@ -16,7 +16,7 @@ This web application has the following features:
 Technologies/Frameworks used:
 React, Bootstrap
 
-The decision to use React to build the app was because it would allow quick deployment and it's something I've worked with in the past. I experimented with Shopify Polaris as a framework but after struggling to get the styling I wanted with a lack of documentation, I decided to go with Bootstrap, which is very well documented and something I have more familiarity with.
+The decision to use React to build the app was because it would allow quick deployment and it's a technology I've worked with in the past. I experimented with Shopify Polaris as a framework but after struggling to get the styling I wanted with a lack of documentation, I decided to go with Bootstrap, which is very well documented and something I have more familiarity with.
 
 Challenges I faced during the project:
 - Initially, when you would like the nth image on the page and after filtering images through your search, the like would remain on the nth image. This didn't make sense to me because I thought all of the components were being re-rendered. It turns out this is due to React's behavior - it doesn't rerender components all the time, only when it needs to. I resolved this issue by differentiating the key of each ImageCard component based off of its id from NASA's API, not the id in the mapped array, which it was originally. Therefore, the key prop would always be unique for each ImageCard and always rerender every component whenever a search is made.
